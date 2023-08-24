@@ -90,7 +90,9 @@ typings/
 
 # Electron-Forge
 out/
+.vscode
+package-lock.json
 
 build/
-
-
+dist/
+certificates/

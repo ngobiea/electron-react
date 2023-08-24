@@ -4,6 +4,9 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/renderer/src/entries/index.js',
+    account: './src/renderer/src/entries/account.js',
+    monitor: './src/renderer/src/entries/monitor.js',
+    session: './src/renderer/src/entries/session.js',
   },
   devtool: 'inline-source-map',
   target: 'electron-renderer',
@@ -41,13 +44,14 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpe?g|gif|avif)$/i,
+        test: /\.(png|jpe?g|gif|avif|json)$/i,
         use: [
           {
             loader: 'file-loader',
           },
         ],
       },
+      { test: /face-api.esm.js/, type: 'javascript/esm' },
     ],
   },
   plugins: [],
